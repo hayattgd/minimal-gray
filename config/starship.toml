@@ -1,0 +1,53 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+format = """\
+$env_var\
+@\
+$hostname\
+:\
+$directory \
+$git_branch \
+$c \
+\n$character
+"""
+
+scan_timeout = 10
+
+[character]
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'
+
+[hostname]
+ssh_only = false
+format = "[$hostname](bold red)[$ssh_symbol](bold blue)"
+ssh_symbol = " 󰖩 "
+disabled = false
+
+[env_var.USER]
+format = "[$env_value]($style)"
+default = "prob hayattgd...?"
+style = "white bold dimmed"
+
+[directory]
+format = " [$path]($style)[$read_only]($read_only_style)"
+read_only = " 󰌾 "
+read_only_style = "yellow"
+truncation_length = 2
+truncation_symbol = ""
+truncate_to_repo = true
+
+[git_branch]
+format = "on [$symbol$branch]($style)"
+symbol = " "
+
+[c]
+format = "with [$symbol $name-$version ]($style)"
+symbol = "C"
+detect_extensions = [ "c", "h" ]
+detect_files = [ "Makefile" ]
+commands = [ [ "cc", "--version" ], [ "gcc", "--version" ], [ "clang", "--version" ] ]
+
+[package]
+disabled = true
