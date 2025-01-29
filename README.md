@@ -2,6 +2,7 @@ Try using my [themesw (Theme-switcher)](https://github.com/hayattgd/Theme-switch
 
 ### Important
 
+hyprland.conf contains multi-monitor setup with up and down.
 please edit hyprland and kitty config, it sources `~/hyprland-bind.conf` and `~/kitty-bind.conf`, so if you wont set binds properly, you may be unable to start anything.
 
 ### Licenses
