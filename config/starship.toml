@@ -28,7 +28,7 @@ disabled = false
 [env_var.USER]
 format = "[$env_value]($style)"
 default = "prob hayattgd...?"
-style = "white bold dimmed"
+style = "white bold"
 
 [directory]
 format = " [$path]($style)[$read_only]($read_only_style)"
