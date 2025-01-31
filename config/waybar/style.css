@@ -86,8 +86,13 @@ window#waybar {
     animation-direction: alternate;
 }
 
+#network {
+    border-radius: 10px;
+}
+
 #network.disconnected {
-    background: #f53c3c;
+    background: transparent;
+    background-color: rgba(252, 52, 52, 0.705);
 }
 
 #custom-spotify {

@@ -4,9 +4,9 @@
     "height": 37, // Waybar height
     "width": 1850, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces","custom/spotify"],
+    "modules-left": ["hyprland/workspaces", "custom/chromium", "custom/spotify"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "pulseaudio", "clock"],
+    "modules-right": ["tray", "pulseaudio", "network", "clock"],
     "spacing": 10,
     "hyprland/workspaces": {
         "all-outputs": false,
@@ -14,17 +14,21 @@
         "format-window-separator": "  ",
         "window-rewrite-default": "",
         "window-rewrite": {
-            "title<.*youtube.*>": "",
-            "title<.*pacman.*": "",
-            "title<.*github.*>": "",
-            "Spotify": "",
+            "kitty": "",
+            "htop": "",
+            "UNDERTALE": "",
             "Google-chrome": "",
+            "Spotify": "",
             "Discord": "",
             "Thunar": "",
             "swappy": "",
-            "kitty": "",
             "code": "",
-            "OBS": "󰻃"
+            "OBS": "󰻃",
+            "steam": "",
+            "blender": "",
+            "hyprland-update-screen": "󱔄",
+            "title<.*youtube.*>": "",
+            "title<.*github.*>": ""
         },
         "format-icons": {
             "urgent": "!",
@@ -62,9 +66,9 @@
     },
     "network": {
         // "interface": "wlp2s0", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-disconnected": "Disconnected ⚠"
+        "format-wifi": " ({signalStrength}%)   ",
+        "format-ethernet": "   ",
+        "format-disconnected": " Disconnected ⚠ "
     },
     "pulseaudio": {
         //"scroll-step": 1,
@@ -86,7 +90,14 @@
         "format": " {}",
         "max-length": 256,
         "interval": 1, // Remove this if your script is endless and write in loop
-        "exec": "~/.config/waybar/mediaplayer.sh", // Script in resources folder
+        "exec": "~/.config/waybar/spotify.sh", // Script in resources folder
         "exec-if": "pgrep spotify"
+    },
+    "custom/chromium": {
+        "format": " {}",
+        "max-length": 256,
+        "interval": 1, // Remove this if your script is endless and write in loop
+        "exec": "~/.config/waybar/chromium.sh", // Script in resources folder
+        "exec-if": "playerctl metadata -p chromium && not pgrep spotify"
     }
 }
