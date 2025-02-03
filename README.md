@@ -1,9 +1,14 @@
 Try using my [themesw (Theme-switcher)](https://github.com/hayattgd/Theme-switcher) so you can easily switch between themes!
 
-### Important
+### Monitor
 
 hyprland.conf contains multi-monitor setup with up and down.
-please edit hyprland and kitty config, it sources `~/hyprland-bind.conf` and `~/kitty-bind.conf`, so if you wont set binds properly, you may be unable to start anything.
+
+### Thing to edit
+
+Setup your own key-binds on `~/hyprland-bind.conf` and `~/kitty-bind.conf`.
+
+Change `hay-IPhone` to your phone name in `config/waybar/IPhone.sh` or delete it if you wont use it.
 
 ### Licenses
 

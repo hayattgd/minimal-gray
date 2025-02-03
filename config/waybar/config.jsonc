@@ -1,10 +1,9 @@
 {
-    "layer": "top", // Waybar at top layer
-    "position": "top", // Waybar at the bottom of your screen
-    "height": 37, // Waybar height
-    "width": 1850, // Waybar width
-    // Choose the order of the modules
-    "modules-left": ["hyprland/workspaces", "custom/chromium", "custom/spotify"],
+    "layer": "top",
+    "position": "top",
+    "height": 37,
+    "width": 1850,
+    "modules-left": ["hyprland/workspaces", "custom/chromium", "custom/spotify", "custom/nintendo"],
     "modules-center": ["hyprland/window"],
     "modules-right": ["tray", "pulseaudio", "network", "clock"],
     "spacing": 10,
@@ -25,6 +24,7 @@
             "code": "",
             "OBS": "󰻃",
             "steam": "",
+            "steam_app": "",
             "blender": "",
             "hyprland-update-screen": "󱔄",
             "title<.*youtube.*>": "",
@@ -40,7 +40,6 @@
         "format": "{title}"
     },
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
     },
     "clock": {
@@ -55,17 +54,13 @@
     "battery": {
         "bat": "BAT0",
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
-        // "interface": "wlp2s0", // (Optional) To force the use of this interface
         "format-wifi": " ({signalStrength}%)   ",
         "format-ethernet": " ",
         "tooltip-format-ethernet": " IP:{ipaddr} ",
@@ -74,33 +69,30 @@
         "on-click": "ip addr show | grep -Po '192\\.168\\.\\d{1,3}\\.\\d{1,3}' | head -n 1 | wl-copy"
     },
     "pulseaudio": {
-        //"scroll-step": 1,
         "format": "{icon} {volume}%",
         "format-bluetooth": "{icon} {volume}%",
         "format-muted": "",
         "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", ""]
         },
         "on-click": "pamixer -t"
     },
-    "custom/spotify": {
+    "custom/spotify": { //Spotify
         "format": " {}",
         "max-length": 256,
-        "interval": 1, // Remove this if your script is endless and write in loop
-        "exec": "~/.config/waybar/spotify.sh", // Script in resources folder
-        "exec-if": "pgrep spotify"
+        "interval": 1,
+        "exec": "~/.config/waybar/spotify.sh"
     },
-    "custom/chromium": {
+    "custom/chromium": { //Youtube Music or anything...
         "format": " {}",
         "max-length": 256,
-        "interval": 1, // Remove this if your script is endless and write in loop
-        "exec": "~/.config/waybar/chromium.sh", // Script in resources folder
-        "exec-if": "playerctl metadata -p chromium && not pgrep spotify"
+        "interval": 1,
+        "exec": "~/.config/waybar/chromium.sh"
+    },
+    "custom/nintendo": { //Nintendo Music
+        "format": "󰎇 {}",
+        "max-length": 256,
+        "interval": 1,
+        "exec": "~/.config/waybar/nintendo.sh"
     }
 }
