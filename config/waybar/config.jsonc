@@ -1,11 +1,10 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 37,
-    "width": 1850,
-    "modules-left": ["hyprland/workspaces", "custom/chromium", "custom/spotify", "custom/nintendo"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["tray", "pulseaudio", "network", "clock"],
+    "height": 32,
+    // "width": 1850,
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-right": ["tray", "network", "pulseaudio", "custom/chromium", "custom/spotify", "custom/nintendo", "clock"],
     "spacing": 10,
     "hyprland/workspaces": {
         "all-outputs": false,
@@ -17,6 +16,7 @@
             "htop": "",
             "UNDERTALE": "",
             "Google-chrome": "",
+            "firefox": "󰈹",
             "Spotify": "",
             "Discord": "",
             "Thunar": "",
@@ -26,9 +26,7 @@
             "steam": "",
             "steam_app": "",
             "blender": "",
-            "hyprland-update-screen": "󱔄",
-            "title<.*youtube.*>": "",
-            "title<.*github.*>": ""
+            "hyprland-update-screen": "󱔄"
         },
         "format-icons": {
             "urgent": "!",
@@ -43,7 +41,8 @@
         "spacing": 10
     },
     "clock": {
-        "format-alt": "{:%Y-%m-%d}"
+        "format": "{:%m-%d %H:%M:%S}",
+        "format-alt": "{:%H:%M}"
     },
     "cpu": {
         "format": "CPU {usage}%"
@@ -88,6 +87,12 @@
         "max-length": 256,
         "interval": 1,
         "exec": "~/.config/waybar/chromium.sh"
+    },
+    "custom/firefox": { //firefox cuz why not???
+        "format": "󰈹 {}",
+        "max-length": 256,
+        "interval": 1,
+        "exec": "~/.config/waybar/firefox.sh"
     },
     "custom/nintendo": { //Nintendo Music
         "format": "󰎇 {}",
