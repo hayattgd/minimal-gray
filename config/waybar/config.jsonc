@@ -17,6 +17,7 @@
             "UNDERTALE": "",
             "Google-chrome": "",
             "firefox": "󰈹",
+            "vlc": "󰕼",
             "Spotify": "",
             "Discord": "",
             "Thunar": "",
@@ -87,6 +88,12 @@
         "max-length": 256,
         "interval": 1,
         "exec": "~/.config/waybar/chromium.sh"
+    },
+    "custom/vlc": {
+        "format": "󰕼 {}",
+        "max-length": 256,
+        "interval": 1,
+        "exec": "~/.config/waybar/vlc.sh"
     },
     "custom/firefox": { //firefox cuz why not???
         "format": "󰈹 {}",

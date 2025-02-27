@@ -4,7 +4,7 @@
     font-size: 15px;
     font-weight: 700;
     min-height: 28px;
-    border-radius: 0px 0px 32px 32px;
+    border-radius: 8px;
 }
 
 .modules-right {
@@ -20,6 +20,7 @@
 }
 
 window#waybar {
+  border-radius: 0px 0px 32px 32px;
     background: transparent;
     background-color: rgba(37, 44, 51, 0.671);
     color: white;
@@ -101,4 +102,8 @@ window#waybar {
 
 #custom-nintendo {
     color: rgb(255, 82, 82);
+}
+
+#custom-vlc {
+  color: rgb(238, 140, 70)
 }
