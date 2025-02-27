@@ -34,8 +34,8 @@ style = "white bold"
 format = " [$path]($style)[$read_only]($read_only_style)"
 read_only = " 󰌾 "
 read_only_style = "yellow"
-truncation_length = 2
-truncation_symbol = ""
+truncation_length = 3
+truncation_symbol = "..."
 truncate_to_repo = true
 
 [git_branch]
