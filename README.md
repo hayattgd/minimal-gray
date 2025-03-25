@@ -2,7 +2,7 @@ Try using my [themesw (Theme-switcher)](https://github.com/hayattgd/Theme-switch
 
 ### Monitor
 
-hyprland.conf contains multi-monitor setup with up and down.
+Please use [nwg-displays](https://github.com/nwg-piotr/nwg-displays) for multi-monitor environment.
 
 ### Thing to edit
 
