@@ -6,14 +6,71 @@ format = """\
 $env_var\
 @\
 $hostname\
-:\
+$os:\
 $directory \
 $git_branch \
 $c \
 \n$character
 """
 
-scan_timeout = 10
+scan_timeout = 6
+follow_symlinks = true
+
+[os]
+format = " $symbol [](#FDFDFB)"
+disabled = false
+
+[os.symbols]
+AIX = "➿"
+Alpaquita = "🔔"
+AlmaLinux = "💠"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "[󰣇](#1793D1)"
+Artix = "󰣇"
+CachyOS = "🎗️"
+CentOS = ""
+Debian = ""
+DragonFly = "🐉"
+Emscripten = "🔗"
+EndeavourOS = ""
+Fedora = ""
+FreeBSD = ""
+Garuda = "🦅"
+Gentoo = ""
+HardenedBSD = "🛡️"
+Illumos = "🐦"
+Kali = ""
+Linux = ""
+Mabox = "📦"
+Macos = "[](#ffffff)"
+Manjaro = "🥭"
+Mariner = "🌊"
+MidnightBSD = "🌘"
+Mint = "󰣭"
+NetBSD = "🚩"
+NixOS = "󱄅"
+Nobara = "🎩"
+OpenBSD = ""
+OpenCloudOS = "☁️"
+openEuler = "🦉"
+openSUSE = ""
+OracleLinux = ""
+Pop = ""
+Raspbian = ""
+Redhat = "🎩"
+RedHatEnterprise = "🎩"
+RockyLinux = "💠"
+Redox = "🧪"
+Solus = ""
+SUSE = ""
+Ubuntu = "󰕈"
+Ultramarine = "🔷"
+Unknown = ""
+Uos = "🐲"
+Void = ""
+Windows = "[](#0078D6)"
 
 [character]
 success_symbol = '[❯](bold green)'
